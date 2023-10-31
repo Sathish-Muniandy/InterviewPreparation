@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_primary"
+    tools:context=".AddExpenseActivity">
+
+
+
+   <!-- <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/begin_guid"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:id="@+id/end_guid"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="50dp" />
+-->
+    <!--<ScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+-->
+    <!--<androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_close_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/addTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/courgette_regular"
+            android:text="Add Transaction"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <TextView
+            android:id="@+id/usd"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/add_bar_bg"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/courgette_regular"
+            android:gravity="center"
+            android:text="USD"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/amountTIL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintWidth_percent="0.5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/courgette_regular"
+                android:hint="total"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/category_cl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="50dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/usd">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/expense_img"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:src="@drawable/travel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.25" />
+
+            <TextView
+                android:id="@+id/expense_item"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/courgette_regular"
+                android:gravity="start"
+                android:text="Travel"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:boxBackgroundColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.65" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/category_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="0dp"
+            android:visibility="gone"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintTop_toBottomOf="@+id/category_cl" />
+
+
+        <ImageView
+            android:id="@+id/calenterIv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:src="@drawable/ic_baseline_calendar_today_24"
+            android:text="USD"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_rv"
+            app:layout_constraintWidth_percent="0.2"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/courgette_regular"
+            android:gravity="center_vertical"
+            android:text="Select Date"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_rv"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/notesIv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:src="@drawable/ic_baseline_notes_24"
+            android:text="USD"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calenterIv"
+            app:layout_constraintWidth_percent="0.2"
+            app:tint="@color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/notesTIL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="50dp"
+            android:textColorHint="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_tv"
+            app:layout_constraintWidth_percent="0.5">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/courgette_regular"
+                android:hint="Notes(Optional)"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/add_bar_bg"
+            android:backgroundTint="#0C15E8"
+            android:fontFamily="@font/courgette_regular"
+            android:text="Done"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--</androidx.core.widget.NestedScrollView>-->
+   <!-- </ScrollView>-->
+   <!-- </LinearLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

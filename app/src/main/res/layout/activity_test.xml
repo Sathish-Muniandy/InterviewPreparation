@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="test"
+            type="com.example.interviewpreparation.model.Test" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TestActivity">
+
+
+       <!-- <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent="0.05">-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.05"
+                android:id="@+id/et"
+                android:text="@{test.name}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/tv" />
+
+        <!--</com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        android:text="@{test.name}"-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.05"
+            android:id="@+id/tv"
+            android:text="@{String.valueOf(test.age)}"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/et" />
+<!--        android:text="@{String.valueOf(test.age)}"-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/btnlay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv"
+            app:layout_constraintHeight_percent="0.05">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Plus"
+                android:id="@+id/plus_btn"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.48" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Minus"
+                android:id="@+id/minus_btn"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.48" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.85"
+            android:id="@+id/add_rv"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

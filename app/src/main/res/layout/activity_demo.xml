@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DemoActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/guide1"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/guide2"
+        app:layout_constraintGuide_end="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/guide3"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/guide4"
+        app:layout_constraintGuide_end="50dp" />
+    
+    <EditText
+        android:layout_width="0dp"
+        android:id="@+id/et1"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/guide3"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintEnd_toEndOf="@+id/guide2" />
+
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/et2"
+        android:shadowColor="@color/black"
+        android:hint="Sathish"
+        android:paddingStart="30dp"
+        android:background="@drawable/edittext_bg"
+        app:layout_constraintTop_toBottomOf="@+id/et1"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintEnd_toEndOf="@+id/guide2" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Password"
+        android:id="@+id/et3"
+        app:hintTextColor="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintEnd_toEndOf="@+id/guide2"
+        app:layout_constraintTop_toBottomOf="@+id/et2"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:src="@drawable/ic_lens"
+        android:id="@+id/redBtn"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:tint="@color/red_primary" />
+
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:src="@drawable/ic_lens"
+        android:background="@color/white"
+        android:id="@+id/blueBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:tint="@color/blue_primary" />
+
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:src="@drawable/ic_lens"
+        android:id="@+id/greenBtn"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:tint="@color/green_primary" />
+
+    <TextView
+        style="@style/TextViewBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:text="First Text"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintVertical_bias="0.80"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:text="Second Text"
+        android:textSize="20dp"
+        style="@style/TextViewMedium"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintVertical_bias="0.90"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

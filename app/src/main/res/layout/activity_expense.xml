@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C15E8"
+    tools:context=".ExpenseActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/begin_guid"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:id="@+id/end_guid"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="50dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/layout_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:id="@+id/title"
+            android:background="@drawable/add_bar_bg"
+            android:backgroundTint="#DDD6D6"
+            android:layout_marginEnd="50dp"
+            android:layout_height="0dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintWidth_percent="0.48"
+                android:text="Today"
+                android:fontFamily="@font/courgette_regular"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/add_bar_bg"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintWidth_percent="0.48"
+                android:text="Month"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:fontFamily="@font/courgette_regular"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/fragment"
+            android:layout_marginTop="10dp"
+            app:layout_constraintHeight_percent="0.75"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            android:background="@color/white" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/light_blue"
+            android:background="@drawable/add_bar_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.1" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Add Expense Amount"
+                android:textSize="18dp"
+                android:paddingEnd="20dp"
+                android:fontFamily="@font/courgette_regular"
+                android:background="@drawable/add_bar_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:drawableEnd="@drawable/baseline_add_circle_24"
+                android:drawableTint="@color/white"
+                android:backgroundTint="#0C15E8"
+                android:textColor="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

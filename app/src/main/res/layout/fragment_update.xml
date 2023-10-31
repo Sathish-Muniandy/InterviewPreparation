@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RoomDB.Fragment.UpdateFragment">
+
+
+    <EditText
+        android:id="@+id/nameupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="First Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lnameupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Last Name"
+        app:layout_constraintEnd_toEndOf="@+id/nameupdate"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/nameupdate"
+        app:layout_constraintTop_toBottomOf="@+id/nameupdate" />
+
+    <EditText
+        android:id="@+id/ageupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Age"
+        app:layout_constraintEnd_toEndOf="@+id/lnameupdate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lnameupdate"
+        app:layout_constraintTop_toBottomOf="@+id/lnameupdate" />
+
+    <Button
+        android:id="@+id/updatebtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Update"
+        app:layout_constraintEnd_toEndOf="@+id/ageupdate"
+        app:layout_constraintStart_toStartOf="@+id/ageupdate"
+        app:layout_constraintTop_toBottomOf="@+id/ageupdate" />
+</androidx.constraintlayout.widget.ConstraintLayout>
